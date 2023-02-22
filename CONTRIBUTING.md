@@ -11,7 +11,7 @@ If you would like to contribute to our project, please reach out to the team lea
 
 ## **Part 1: Setting up the development environment**
 
-### Forking and cloning the repository
+### **1.1 Forking and cloning the repository**
 
 #### Step 1: Become a member of the repository Team
 
@@ -93,7 +93,7 @@ git checkout -b fix-logo-width-311
 
 The text after the `-b`, in the example `fix-logo-width-311`, will be the name of your new branch. Choose a branch name that relates to the issue you're working on. (No spaces!) The format should look like the scheme above where the words are a brief description of the issue that will make sense at a glance to someone unfamiliar with the issue.
 
-### Incorporating changes from upstream
+### **2.2 Incorporating changes from upstream**
 
 Your fork of this repository on GitHub, and your local clone of that fork, will
 get out of sync with the upstream repository from time to time.
@@ -111,7 +111,7 @@ git reset --hard vrms/development
 
 This will reset the current HEAD to match the VRMS development repository.
 
-## Get up and running
+### **1.3 Get up and running**   
 
 1. Have [Node](https://nodejs.org/en/download/) and NPM installed locally:
 
@@ -151,40 +151,27 @@ This will reset the current HEAD to match the VRMS development repository.
 
    To run `client`:
 
-   - Navigate to the root of the application `vrms/` and run `npm run dev`
+   - Navigate to the root of the application `vrms/` and run `yarn start`
 
-   To run `client-mvp-04`:
+   *Troubleshooting :* If you encounter the following error after running `yarn start`:
+   
+      ```
+      Error: error:0308010C:digital envelope routines::unsupported
+      ```
+   Try changing your node version to `16.14.2` by running `nvm use 16.14.2`. If you do not have `nvm` installed, see [install instructions](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-   - Navigate to the root of the application `vrms/` and run `npm run mvp`
 
 You should now have a live app. Happy hacking.
 
 
-## Using Git
-
-This section discusses some tips and best practices for working with Git.
-
-### Making changes, committing and pushing
-
-1. Changes start on your local fork of this repository, in your own branch.
-
-1. Commit your changes with a comment related to the issue it addresses to your local repository.
-
-1. Push that commit(s) to GitHub.
-
-1. From the `VRMS` repository, create a Pull Request which asks `VRMS` to pull changes from your fork into the main repository.
-
-1. After the owner of the `VRMS` repository approves and merges your Pull Request, your changes will be live on the website.
-
-
-## Running Tests
+### **1.3 Running Tests**
 
 The VRMS application has a variety of tests written for the application. Review the `package.json` file in any directory
 and look for any variation of `test` scripts.
 
 To run all of the tests run `npm run test:all` from the root folder.
 
-## Using the development database
+## **1.4 Using the development database**
 
 The application uses MongoDB. We have created a shared development database using MongoDB Cloud and MongoDB Atlas. The conection string for the development database is included in the environmental variables that you pasted into your backend/.env file in step 5 of the "Get Up and Running" setion. If you completed that step successfully you should not need to do anything else.
 
