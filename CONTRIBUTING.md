@@ -1,15 +1,15 @@
 # How to contribute to VRMS
 
-If you would like to contribute to our project, please reach out to the leads on Slack or at one of our weekly meetings. You can find the current project team and VRMS team meeting times on the [VRMS Project Details Page](https://www.hackforla.org/projects/vrms).
+If you would like to contribute to our project, please reach out to the team leads on Slack or at one of our weekly meetings. You can find the current project team, their slack links, and our team meeting times on the [VRMS Project Details Page](https://www.hackforla.org/projects/vrms).
 
 
 ## **Table of Contents**
-1. [**Part 1: Setting up the development environment**](#development-environment-setup)
-2. [**Part 2: How to pick up issues**](#how-to-pick-up-issues)
-3. [**Part 3: How to create pull requests**](#how-to-create-pull-requests)
+1. [**Part 1: Setting up the development environment**](#part-1-setting-up-the-development-environment)
+2. [**Part 2: How to pick up issues**](#part-2-how-to-pick-up-issues)
+3. [**Part 3: How to create pull requests**](#part-3-how-to-create-pull-requests)
 
 
-## **Setting up the development environment**
+## **Part 1: Setting up the development environment**
 
 ### Forking and cloning the repository
 
@@ -194,7 +194,7 @@ If you want to install a local copy to experiment with and learn more about Mong
 
 
 
-## **Part 2: Picking up Issues**
+## **Part 2: How to pick up issues**
 ### **2.1 VRMS contributor expectations**
 1. Attend at least 1 team meeting per week
 2. Devote a minimum of 6 hours per week to working on VRMS assignments
@@ -242,14 +242,15 @@ git commit -m "your commit message"
 ``` 
 
 
-## **Part 3: Pull Requests**
-### **3.1 Pushing changes to your forked repository**
+## **Part 3: How to create pull requests**
+### **3.1 Push changes to your forked repository**
 Once you are satisfied with your changes, push them to the feature branch you made within your remote repository.
 ```
 git push --set-upstream origin <your-branch-name>
 ```
-### **3.2 Createing a pull request on the VRMS repository**
+### **3.2 Create a pull request on the VRMS repository**
 1. Go to your forked repository on GitHub and click on the `Compare & pull request` button.
+    - <details><summary>See example screenshot</summary> <img src="https://user-images.githubusercontent.com/73561520/220488394-09bc759e-98d9-4a09-86c6-66378cf50923.png"/></details>
 2. Title your pull request by summarizing the changes you made
 3. Add your issue number to the pull request
 4. Fill out the what changes did you make and why section of the PR creation comment
