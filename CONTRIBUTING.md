@@ -1,19 +1,33 @@
-# How to contribute to VRMS
+- [**Part 1 : How to join the team**](#part-1--how-to-join-the-team)
+  - [**1.1 VRMS contributor expectations**](#11-vrms-contributor-expectations)
+  - [**1.2 Reach out to us on Slack**](#12-reach-out-to-us-on-slack)
+  - [**1.3 Become a member of the repository Team**](#13-become-a-member-of-the-repository-team)
+- [**Part 2: How to set up the development environment**](#part-2-how-to-set-up-the-development-environment)
+  - [**2.1 Fork the repository**](#21-fork-the-repository)
+  - [**2.2 Clone the remote repository to your local computer**](#22-clone-the-remote-repository-to-your-local-computer)
+  - [**2.3 Get up and running**](#23-get-up-and-running)
+  - [**2.4 Running Tests**](#24-running-tests)
+  - [**2.5 Using the development database**](#25-using-the-development-database)
+- [**Part 3: How to work on issues**](#part-3-how-to-work-on-issues)
+  - [**3.1 Claim an Issue**](#31-claim-an-issue)
+  - [**3.2 Create a new branch for each issue you work on**](#32-create-a-new-branch-for-each-issue-you-work-on)
+  - [**3.3 Work on the Issue**](#33-work-on-the-issue)
+- [**Part 4: How to create pull requests**](#part-4-how-to-create-pull-requests)
+  - [**4.1 Push changes to your forked repository**](#41-push-changes-to-your-forked-repository)
+  - [**4.2 Create a pull request on the VRMS repository**](#42-create-a-pull-request-on-the-vrms-repository)
 
+
+## **Part 1 : How to join the team**
+
+### **1.1 VRMS contributor expectations**
+- Attend at least 1 team meeting per week
+- Devote a minimum of 6 hours per week to working on VRMS assignments
+- Communicate with the team leadership if you plan to step away from the project
+
+### **1.2 Reach out to us on Slack**
 If you would like to contribute to our project, please reach out to the team leads on Slack or at one of our weekly meetings. You can find the current project team, their slack links, and our team meeting times on the [VRMS Project Details Page](https://www.hackforla.org/projects/vrms).
 
-
-## **Table of Contents**
-1. [**Part 1: Setting up the development environment**](#part-1-setting-up-the-development-environment)
-2. [**Part 2: How to pick up issues**](#part-2-how-to-pick-up-issues)
-3. [**Part 3: How to create pull requests**](#part-3-how-to-create-pull-requests)
-
-
-## **Part 1: Setting up the development environment**
-
-### **1.1 Forking and cloning the repository**
-
-#### Step 1: Become a member of the repository Team
+### **1.3 Become a member of the repository Team**
 
 Send your GitHub name to the project manager, or post it in the [VRMS Slack channel](https://hackforla.slack.com/archives/CRGH5HM0Q), and we'll add you as a member to the GitHub repository Team. Note: you should be added to both the VRMS and VRMS-write teams.
 
@@ -25,7 +39,9 @@ Once you have accepted the GitHub invite (via email or in your GitHub notificati
 
 These steps are manditory in order to contribute to all HackforLA projects.
 
-#### Step 2: Fork the repository
+## **Part 2: How to set up the development environment**
+
+### **2.1 Fork the repository**
 
 In https://github.com/hackforla/VRMS, look for the fork icon in the top right. Click it and create a fork of the repository.
 
@@ -37,7 +53,7 @@ Note that this copy is on a remote server on the GitHub website and not on your 
 
 If you click the icon again, it will not create a new fork but instead give you the URL associated with your fork.
 
-#### Step 3: Clone your online repository to your local computer
+### **2.2 Clone the remote repository to your local computer**
 
 The following process will make a copy of the fork that you just created on your local computer.
 
@@ -71,47 +87,8 @@ git remote add vrms https://github.com/hackforla/vrms.git
 
 Note: Understanding how git remotes work will make collaborating much easier. You can learn more about remotes [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork) and [here](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)
 
-#### Step 4: Change to a new branch
 
-Create a new branch for each issue you work on. Doing all your work on topic branches leaves your repository's main branch unmodified and greatly simplifies keeping your fork in sync with the main project.
-
-This command will let you know available branches and which branch you're on.
-
-```bash
-git branch
-```
-
-Star (`*`) indicates which branch you're on
-
-By default you should start on the `development` branch.
-
-This command will (create and) change to a new branch:
-
-```bash
-git checkout -b fix-logo-width-311
-```
-
-The text after the `-b`, in the example `fix-logo-width-311`, will be the name of your new branch. Choose a branch name that relates to the issue you're working on. (No spaces!) The format should look like the scheme above where the words are a brief description of the issue that will make sense at a glance to someone unfamiliar with the issue.
-
-### **2.2 Incorporating changes from upstream**
-
-Your fork of this repository on GitHub, and your local clone of that fork, will
-get out of sync with the upstream repository from time to time.
-
-Assuming you have a local clone with remotes `vrms` (the VRMS development repo that you forked) and `origin`
-(your fork of this repo)at GitHub, you can do the following:
-
-```bash
-# WARNING: this will erase local pending changes!
-# commit them to a different branch or use git stash
-git checkout development
-git fetch vrms
-git reset --hard vrms/development
-```
-
-This will reset the current HEAD to match the VRMS development repository.
-
-### **1.3 Get up and running**   
+### **2.3 Get up and running**   
 
 1. Have [Node](https://nodejs.org/en/download/) and NPM installed locally:
 
@@ -164,14 +141,14 @@ This will reset the current HEAD to match the VRMS development repository.
 You should now have a live app. Happy hacking.
 
 
-### **1.3 Running Tests**
+### **2.4 Running Tests**
 
 The VRMS application has a variety of tests written for the application. Review the `package.json` file in any directory
 and look for any variation of `test` scripts.
 
 To run all of the tests run `npm run test:all` from the root folder.
 
-## **1.4 Using the development database**
+### **2.5 Using the development database**
 
 The application uses MongoDB. We have created a shared development database using MongoDB Cloud and MongoDB Atlas. The conection string for the development database is included in the environmental variables that you pasted into your backend/.env file in step 5 of the "Get Up and Running" setion. If you completed that step successfully you should not need to do anything else.
 
@@ -181,33 +158,31 @@ If you want to install a local copy to experiment with and learn more about Mong
 
 
 
-## **Part 2: How to pick up issues**
-### **2.1 VRMS contributor expectations**
-1. Attend at least 1 team meeting per week
-2. Devote a minimum of 6 hours per week to working on VRMS assignments
-3. Communicate with the team leadership if you plan to step away from the project
+## **Part 3: How to work on issues**
 
-### **2.2 How VRMS organizes issues**
-Developers may choose from issues with the following `role` labels:
-- `role: Front End`
-- `role: Back End`
-- `role: Database`
 
-### **2.3 Where to find issues**
+### **3.1 Claim an Issue**
+
 The best way to view the issues available is our [GitHub Project Board](https://github.com/hackforla/VRMS/projects/12)
 
 Developers may assign themselves issues only from the [Prioritized Backlog column](https://github.com/hackforla/VRMS/projects/12#column-19074778) and only one at a time.
 
-
-### **2.4 Claiming an Issue**
 The Prioritized Backlog column is filtered so the first (top) issue has the highest priority and should be worked on next if possible.
+
+Developers may choose from issues with the following `role` labels:
+- `role: Front End`
+- `role: Back End`
+- `role: Database`
 
 
 1. Assign yourself to the issue 
 2. Move the issue to the `In Progress` column
 
 
-### **2.5 Working on an Issue**
+### **3.2 Create a new branch for each issue you work on**
+Create a new branch for each issue you work on. Doing all your work on topic branches leaves your repository's main branch unmodified and greatly simplifies keeping your fork in sync with the main project.
+
+
 You must first create a new branch before you begin work on an issue.
 
 1. Make sure you are on the `development` branch by using the command 
@@ -222,26 +197,30 @@ git pull vrms development
 ```
 git checkout -b <your-branch-name>
 ```
-4. Add and commit changes to your new branch using the commands
+
+### **3.3 Work on the Issue**
+The issue will contain several action items you must complete before you are ready to submit a pull request.
+
+Give advice about how often to commit?
+
+You can add and commit changes to your new branch using the commands
 ```
 git add .
 git commit -m "your commit message"
 ``` 
 
 
-## **Part 3: How to create pull requests**
-### **3.1 Push changes to your forked repository**
+## **Part 4: How to create pull requests**
+### **4.1 Push changes to your forked repository**
 Once you are satisfied with your changes, push them to the feature branch you made within your remote repository.
 ```
 git push --set-upstream origin <your-branch-name>
 ```
-### **3.2 Create a pull request on the VRMS repository**
-1. Go to your forked repository on GitHub and click on the `Compare & pull request` button.
-    - <details><summary>See example screenshot</summary> <img src="https://user-images.githubusercontent.com/73561520/220488394-09bc759e-98d9-4a09-86c6-66378cf50923.png"/></details>
-2. Title your pull request by summarizing the changes you made
-3. Add your issue number to the pull request
-4. Fill out the what changes did you make and why section of the PR creation comment
-5. Include images with your pull request if there are any visual changes to the user interface
-
-
-
+### **4.2 Create a pull request on the VRMS repository**
+- Go to your forked repository on GitHub and click on the `Compare & pull request` button.
+  <details><summary>See example screenshot</summary> <img src="https://user-images.githubusercontent.com/73561520/220488394-09bc759e-98d9-4a09-86c6-66378cf50923.png"/></details>
+- Title your pull request by summarizing the changes you made
+- Add your issue number to the pull request
+- Fill out the "What changes did you make and why?" section 
+- Include before & after images with your pull request if there are visual changes to the user interface
+- Request a review from another developer on the team
