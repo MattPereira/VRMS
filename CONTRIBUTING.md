@@ -223,9 +223,37 @@ The Prioritized Backlog column is filtered so the first (top) issue has the high
 ### **2.5 Working on an Issue**
 You must first create a new branch before you begin work on an issue.
 
-1. Make sure you are on the `development` branch by using the command `git branch`
-2. Pull down the latest changes from the `development` branch by using the command `git pull vrms development`
-3. 
-   
+1. Make sure you are on the `development` branch by using the command 
+```
+git branch
+```
+2. Pull down the latest changes from the `development` branch by using the command
+```
+git pull vrms development
+```
+3. Create a new branch where you will work on your issue by using the command 
+```
+git checkout -b <your-branch-name>
+```
+4. Add and commit changes to your new branch using the commands
+```
+git add .
+git commit -m "your commit message"
+``` 
 
-## **Part 3: Creating Pull Requests**
+
+## **Part 3: Pull Requests**
+### **3.1 Pushing changes to your forked repository**
+Once you are satisfied with your changes, push them to the feature branch you made within your remote repository.
+```
+git push --set-upstream origin <your-branch-name>
+```
+### **3.2 Createing a pull request on the VRMS repository**
+1. Go to your forked repository on GitHub and click on the `Compare & pull request` button.
+2. Title your pull request by summarizing the changes you made
+3. Add your issue number to the pull request
+4. Fill out the what changes did you make and why section of the PR creation comment
+5. Include images with your pull request if there are any visual changes to the user interface
+
+
+
